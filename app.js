@@ -4,20 +4,33 @@ const clear = document.querySelector('.clear');
 const operationBtn = document.querySelectorAll('[data-operation]');
 const numBtn = document.querySelectorAll('[data-num]');
 
+let plusArr = [];
+let minusArr = [];
+let timesArr = [];
+let divideArr = [];
+
+function clearScreen() {
+    screen.innerHTML = "";
+}
+
+function add() {
+    plusArr.push(screen.innerHTML);
+}
+
 equals.onclick = () => {
     console.log("=");
 }
 
 clear.onclick = () => {
     console.log("Clear!");
-    screen.innerHTML = 0;
+    clearScreen();
 }
 
 // operation buttons
 operationBtn.forEach((btn)=>{
     btn.onclick = () => {
         if (btn.innerHTML === "+") {
-            console.log("PLUS");
+            add();
         }
         if (btn.innerHTML === "-") {
             console.log("MINUS");
@@ -29,16 +42,22 @@ operationBtn.forEach((btn)=>{
             console.log("DIVIDE");
         }
         if (btn.innerHTML === "%") {
-            console.log("PERCENT");
+            //
         }
+        // if (btn.innerHTML === ".") {
+        //     screen.innerHTML += ".";
+        // }
     }
 })
 
 // number buttons
-numBtn.forEach((btn)=>{
+numBtn.forEach((btn)=> {
+    clearScreen();
     btn.onclick = () => {
         if (btn.innerHTML === "0") {
-            screen.innerHTML += 0;
+            if (screen.innerHTML > 0) {
+                screen.innerHTML += 0;
+            }
         }
         if (btn.innerHTML === "1") {
             screen.innerHTML += 1;
