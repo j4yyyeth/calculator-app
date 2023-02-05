@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: rgb(134, 208, 232);
+    background-color: rgb(179, 187, 190);
 }
 
 #box {
@@ -24,6 +24,7 @@ body {
     box-shadow: 0px 0px 25px 0px rgba(0,0,0,1);
     color: white;
     font-size: 20px;
+    user-select: none;
 }
 
 .grid {
@@ -32,11 +33,6 @@ body {
    grid-template-columns: 1fr 1fr 1fr 1fr;
    gap: 12px;
    height: 100%;
- }
-
- .grid span {
-    color: rgb(147, 102, 189);
-    font-size: 30px;
  }
 
  .screen {
@@ -48,10 +44,11 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 30px;
+    color:rgb(179, 187, 190);
  }
 
  .equals {
-    background-color: rgb(81, 81, 255); 
+    background-color: rgb(17, 189, 252); 
     grid-row-start: 6;
     grid-column-start: 3;
     grid-row-end: 7;
@@ -59,9 +56,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    font-size: 40px;
     border: none;
-    border-radius: 10px;
+    border-radius: 0px 0px 25px 0px;
  }
 
  .clear {
@@ -75,7 +72,14 @@ body {
     align-items: center;
     font-size: 30px;
     border: none;
-    border-radius: 10px;
+    border-radius: 25px 0px 0px 0px;
+ }
+
+ .operation {
+   color: rgb(147, 102, 189);
+   font-size: 30px;
+   background-color: rgb(36, 36, 36);
+   border: none;
  }
 
  .item {
