@@ -16,8 +16,73 @@ body {
 }
 
 #calculator {
-    height: 600px;
-    width: 400px;
+    height: 650px;
+    width: 450px;
     background-color: rgb(36, 36, 36);
-    border-radius: 20px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,1);
+    color: white;
+    font-size: 20px;
 }
+
+.grid {
+   display: grid; 
+   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   gap: 12px;
+   height: 100%;
+ }
+
+ .grid span {
+    color: rgb(147, 102, 189);
+    font-size: 30px;
+ }
+
+ .screen {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row-end: 2;
+    grid-column-end: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .equals {
+    background-color: rgb(81, 81, 255); 
+    grid-row-start: 6;
+    grid-column-start: 3;
+    grid-row-end: 7;
+    grid-column-end: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border: none;
+    border-radius: 10px;
+ }
+
+ .clear {
+    background-color: rgb(255, 70, 70); 
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-row-end: 3;
+    grid-column-end: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border: none;
+    border-radius: 10px;
+ }
+
+ .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgb(36, 36, 36);
+    font-size: 25px;
+    border: none;
+ }
