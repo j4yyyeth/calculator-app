@@ -10,20 +10,32 @@ let timesArr = [];
 let divideArr = [];
 
 function clearScreen() {
-    screen.innerHTML = "";
+    screen.innerHTML = null;
 }
 
 function add() {
-    plusArr.push(screen.innerHTML);
+    plusArr.push(+(screen.innerHTML));
+    clearScreen();
+    // screen.innerHTML += plusArr[0] + 5;
+    console.log(plusArr);
 }
 
 equals.onclick = () => {
-    console.log("=");
+    plusArr.push(+(screen.innerHTML));
+    if (plusArr.length < 2) {
+        plusArr.forEach((num)=>{
+            +(num);
+        });
+        screen.innerHTML = plusArr[0] + plusArr[1];
+    }
+    screen.innerHTML = plusArr[0] + plusArr[1];
+    console.log(screen.innerHTML);
+    console.log(typeof plusArr[1]);
 }
 
 clear.onclick = () => {
-    console.log("Clear!");
     clearScreen();
+    plusArr = [];
 }
 
 // operation buttons
